@@ -1,0 +1,238 @@
+@import "components/keyframe";
+@import "components/popup";
+
+.matrix-wishlist-button.matrix-wishlist-added {
+  &:before {
+    content: '\2713';
+    margin-right: 5px;
+  }
+}
+
+.matrix-wishlist-button.matrix-wishlist-adding {
+  &:after {
+    content: '...' !important;
+    display: inline-block !important;
+  }
+}
+
+.matrix-wishlist-view-wishlist {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.matrix-wishlist-new-wishlist {
+  display: flex;
+  align-items: center;
+
+  input {
+    border-radius: 4px !important;
+    height: 40px !important;
+    line-height: 38px !important;
+    padding: 0 10px !important;
+    margin: 0;
+  }
+
+  input[type="button"] {
+    margin-left: 10px;
+  }
+}
+
+#matrix_wishlist_wishlist_name {
+  flex-grow: 1;
+}
+
+.matrix-wishlist-disable {
+  opacity: .5;
+  pointer-events: none;
+}
+
+@import "components/rtl";
+
+
+.matrix-wishlist-items-table {
+  .matrix-wishlist-item {
+    .matrix-wishlist-item--note {
+      padding-left: 10px;
+      border-left: 2px solid #222;
+      font-style: italic;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .matrix-wishlist-item--note-add {
+      width: 100%;
+      position: relative;
+
+      input {
+        height: 40px !important;
+        line-height: 38px !important;
+        padding: 0 10px !important;
+        border-radius: 4px !important;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+
+      input[type="button"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+.matrix-wishlist-list {
+  table.matrix-wishlist-items-table {
+    margin: 0;
+    padding: 0;
+
+    tr {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+
+      td {
+        vertical-align: middle;
+        padding: 10px;
+      }
+
+    }
+
+    .matrix-wishlist-item {
+      .matrix-wishlist-item--remove {
+        vertical-align: middle;
+        width: 16px;
+
+        span {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          cursor: pointer;
+
+          &:before {
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+
+          &:hover {
+            &:before {
+              color: #cc6055;
+            }
+          }
+        }
+
+        span.matrix-wishlist-removing {
+          &:before {
+            animation: matrix-wishlist-spinner 1s linear infinite;
+            -webkit-animation: matrix-wishlist-spinner 1s linear infinite;
+          }
+        }
+      }
+
+      .matrix-wishlist-item--image {
+        width: 100px;
+
+        img {
+          width: 80px;
+          height: auto;
+          border-radius: 2px;
+          border: none;
+          padding: 0;
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+
+      .matrix-wishlist-item--name {
+        a {
+          font-weight: 700;
+        }
+      }
+
+      .matrix-wishlist-item--add {
+        p {
+          border: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .add_to_cart_inline {
+          border: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .matrix-wishlist-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .matrix-wishlist-copy {
+    display: flex;
+    align-items: center;
+
+    .matrix-wishlist-copy-url {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+
+  .matrix-wishlist-share {
+    .matrix-wishlist-share-label {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 10px;
+      text-decoration: none !important;
+      font-style: normal !important;
+    }
+
+    a {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 10px;
+      text-decoration: none !important;
+      font-style: normal !important;
+    }
+  }
+}
+
+.matrix-wishlist-menu-item {
+  .matrix-wishlist-menu-item-inner {
+    position: relative;
+
+    &:after {
+      content: attr(data-count);
+      display: block;
+      background-color: #e94b35;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 400;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      border-radius: 8px;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}
+
+.matrix-wishlist-copy-button {
+  font-size: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+@import "components/spinner";
+@import "components/responsive";

@@ -1,0 +1,23 @@
+@keyframes wpc-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes wpc-spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes matrix-wishlist-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes matrix-wishlist-spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

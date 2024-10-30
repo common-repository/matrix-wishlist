@@ -1,0 +1,9 @@
+
+@media only screen and (max-width: 860px) {
+  .matrix-wishlist-list {
+    .matrix-wishlist-actions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

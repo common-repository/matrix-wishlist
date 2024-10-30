@@ -1,0 +1,48 @@
+body.rtl {
+  .matrix-wishlist-popup {
+    .matrix-wishlist-popup-inner {
+      .matrix-wishlist-popup-content {
+        .matrix-wishlist-popup-header {
+          padding: 0 20px 0 60px;
+
+          .matrix-wishlist-popup-close {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .matrix-wishlist-items-table {
+    .matrix-wishlist-item {
+      .matrix-wishlist-item--note {
+        border-left: none;
+        border-right: 2px solid #222;
+        padding-left: 0;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .matrix-wishlist-list {
+    .matrix-wishlist-copy {
+      .matrix-wishlist-copy-url {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+
+    .matrix-wishlist-share {
+      .matrix-wishlist-share-label {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+
+      a {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+}
